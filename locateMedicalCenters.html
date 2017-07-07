@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/theme.css" type="text/css" />
+    <title>Locate nearest medical center using GPS</title>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE&libraries=geometry&callback=start"
+            type="text/javascript"></script>
+    <script src="src/model/Location.js"></script>
+    <script src="src/ctrl/initialize.js"></script>
+    <script src="src/res/hospitals.js"></script>
+    <script src="src/view/locateMedicalCenters.js"></script>
+</head>
+<body>
+    <h1>NEAREST MEDICAL CENTERS</h1>
+    <p id="name"> --- </p>
+    <p id="addr"> --- </p>
+    <p id="dist"> --- </p>
+    <script>
+        function start() {
+            nmc.view.locateMedicalCenters.getLocation();
+        }
+    </script>
+    <div class="wrapper">
+        <a href="javascript:history.go(0)">Refresh</a>
+    </div>
+</body>
+</html>
